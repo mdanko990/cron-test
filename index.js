@@ -76,12 +76,3 @@ const renderPersons = async () => {
     }
   }
 };
-
-const task = cron.schedule('*/10 * * * * *', () =>  {
-  renderPersons();
-}, {
-  scheduled: true,
-  timezone: 'Europe/London'
-}); 
-
-task.start();
